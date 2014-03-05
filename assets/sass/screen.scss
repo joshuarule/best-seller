@@ -14,22 +14,60 @@ body {
   background: #EFEFEF;
 }
 
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  padding: 15px;
+}
+
 select {
   width: 100%;
+  display: inline-block;
   margin: 0;
   height: 50px;
-  // font-size: 50px;
+  font-size: 18px;
   background: transparent;
   outline: 0;
   background: rgba(0, 0, 0, 0) !important;
-  border: 0;
+  border: 1px solid black;
   border-radius: 0;
   -webkit-appearance: none;
+  text-indent: 10px;
+}
+
+.select-wrap {
+  position: relative;
+  width: 50%;
+  display: inline-block;
+  margin-right: -15px;
+  text-align: center;
+  margin-bottom: 10px;
+
+  &:after {
+    $size: 6px;
+    position: absolute;
+    top: 14px;
+    right: $size*2;
+    // bottom: -$size*2;
+    content: '';
+    border-bottom:  $size solid    black;
+    border-right:    $size solid black;
+    border-left:    $size solid transparent;
+    border-top:     $size solid transparent;
+    @include rotate(45deg);
+
+  }
 }
 
 .container {
   max-width: 960px;
   margin: 0 auto;
+}
+
+img {
 }
 
 ul {
@@ -107,6 +145,10 @@ li {
 .book-image {
   float: left;
   width: 120px;
-  height: auto;
+  height: 190px;
   margin-right: 10px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  // content:'';
 }

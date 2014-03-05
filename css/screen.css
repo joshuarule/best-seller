@@ -70,27 +70,63 @@ body {
   background: #EFEFEF; }
 
 /* line 17, ../assets/sass/screen.scss */
+header {
+  text-align: center; }
+
+/* line 21, ../assets/sass/screen.scss */
+h1 {
+  font-size: 24px;
+  padding: 15px; }
+
+/* line 26, ../assets/sass/screen.scss */
 select {
   width: 100%;
+  display: inline-block;
   margin: 0;
   height: 50px;
+  font-size: 18px;
   background: transparent;
   outline: 0;
   background: rgba(0, 0, 0, 0) !important;
-  border: 0;
+  border: 1px solid black;
   border-radius: 0;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  text-indent: 10px; }
 
-/* line 30, ../assets/sass/screen.scss */
+/* line 41, ../assets/sass/screen.scss */
+.select-wrap {
+  position: relative;
+  width: 50%;
+  display: inline-block;
+  margin-right: -15px;
+  text-align: center;
+  margin-bottom: 10px; }
+  /* line 49, ../assets/sass/screen.scss */
+  .select-wrap:after {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    content: '';
+    border-bottom: 6px solid black;
+    border-right: 6px solid black;
+    border-left: 6px solid transparent;
+    border-top: 6px solid transparent;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+/* line 65, ../assets/sass/screen.scss */
 .container {
   max-width: 960px;
   margin: 0 auto; }
 
-/* line 35, ../assets/sass/screen.scss */
+/* line 73, ../assets/sass/screen.scss */
 ul {
   margin-right: -15px; }
 
-/* line 39, ../assets/sass/screen.scss */
+/* line 77, ../assets/sass/screen.scss */
 li {
   float: left;
   position: relative;
@@ -98,12 +134,12 @@ li {
   padding: 5px;
   min-height: 200px;
   margin-bottom: 5px; }
-  /* line 47, ../assets/sass/screen.scss */
+  /* line 85, ../assets/sass/screen.scss */
   li:first-child {
     float: none;
     margin-left: auto;
     margin-right: auto; }
-  /* line 53, ../assets/sass/screen.scss */
+  /* line 91, ../assets/sass/screen.scss */
   li:after {
     position: absolute;
     content: '';
@@ -114,7 +150,7 @@ li {
     background: #FFF;
     z-index: -1; }
 
-/* line 66, ../assets/sass/screen.scss */
+/* line 104, ../assets/sass/screen.scss */
 .rank {
   right: 5px;
   top: 0;
@@ -125,14 +161,17 @@ li {
   color: #000;
   position: absolute; }
 
-/* line 102, ../assets/sass/screen.scss */
+/* line 140, ../assets/sass/screen.scss */
 .info {
   width: 50%;
   float: left; }
 
-/* line 107, ../assets/sass/screen.scss */
+/* line 145, ../assets/sass/screen.scss */
 .book-image {
   float: left;
   width: 120px;
-  height: auto;
-  margin-right: 10px; }
+  height: 190px;
+  margin-right: 10px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }

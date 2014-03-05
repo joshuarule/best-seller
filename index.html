@@ -24,7 +24,7 @@
             bookList = x.results.books;
 
             for (var i = 0; i < bookList.length; i++) {
-              $(".booklist").append("<li><span class='rank'>" + bookList[i].rank + "</span><img class='book-image' src=" + bookList[i].book_image + "><div class='info'><h1>" + bookList[i].title + "</h1><a href='http://www.amazon.com/gp/product/" + bookList[i].primary_isbn10 + "' target='_blank'>Amazon</a></div><div class='cf'></div></li>");
+              $(".booklist").append("<li><span class='rank'>" + bookList[i].rank + "</span><img class='book-image' style='background-image: url("+ bookList[i].book_image +")'><div class='info'><h2>" + bookList[i].title + "</h2><a href='http://www.amazon.com/gp/product/" + bookList[i].primary_isbn10 + "' target='_blank'>Amazon</a></div><div class='cf'></div></li>");
             };
           }
 
@@ -122,12 +122,20 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="container">
-          <h1>New York Times Best Sellers</h1>
-          <select name="category" id="category">
-          </select>
+          <header>
+            <h1>New York Times Best Sellers</h1>
+            <div class="select-wrap">
+              <select name="category" id="category"></select>
+            </div>
+          </header>
+          
           <!-- <div id="drawing_board"></div> -->
-          <ul class="booklist"></ul>
+          <ul class="booklist">
+            
+          </ul>
+          <div class="cf"></div>
         </div>
+
         
         <!-- Add your site or application content here -->
         <!-- <p>Hello world! This is HTML5 Boilerplate.</p> -->
