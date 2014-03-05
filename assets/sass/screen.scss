@@ -1,0 +1,112 @@
+@import 'compass';
+@import 'compass/reset';
+
+* {
+  @include box-sizing(border-box);
+}
+
+.cf {
+  clear: both;
+}
+
+body {
+  font-family: "helvetica", arial, sans-serif;
+  background: #EFEFEF;
+}
+
+select {
+  width: 100%;
+  margin: 0;
+  height: 50px;
+  // font-size: 50px;
+  background: transparent;
+  outline: 0;
+  background: rgba(0, 0, 0, 0) !important;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+ul {
+  margin-right: -15px;
+}
+
+li {
+  float: left;
+  position: relative;
+  width: 33.33333%;
+  padding: 5px;
+  min-height: 200px;
+  margin-bottom: 5px;
+
+  &:first-child {
+    float: none;
+    margin-left:   auto;
+    margin-right:  auto;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    background: #FFF;
+    z-index: -1;
+  }
+  
+}
+
+.rank {
+  $color: #EFEFEF;
+  $size: 3px;
+  right: 5px;
+  top:    0;
+  text-align: center;
+  width: 28px;
+  background: $color;
+  padding: 5px 0;
+  color: #000;
+  position: absolute;
+
+  // &:after {
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: -$size*2;
+  //   content: '';
+  //   border-top:  $size solid    darken($color, 15%);
+  //   border-right:   $size solid darken($color, 15%);
+  //   border-left:    $size solid transparent;
+  //   border-bottom:     $size solid transparent;
+  // }
+
+  // &:before {
+  //   position: absolute;
+  //   top: 0;
+  //   left: -$size*2;
+  //   // bottom: -$size*2;
+  //   content: '';
+  //   border-bottom:  $size solid    darken($color, 15%);
+  //   border-right:    $size solid darken($color, 15%);
+  //   border-left:    $size solid transparent;
+  //   border-top:     $size solid transparent;
+  // }
+}
+
+.info {
+  width: 50%;
+  float: left;
+}
+
+.book-image {
+  float: left;
+  width: 120px;
+  height: auto;
+  margin-right: 10px;
+}

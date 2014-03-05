@@ -1,0 +1,138 @@
+/* line 17, ../../../../../../Users/jrd02/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../Users/jrd02/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../Users/jrd02/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../Users/jrd02/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../Users/jrd02/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../Users/jrd02/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../Users/jrd02/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../Users/jrd02/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../Users/jrd02/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 4, ../assets/sass/screen.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 8, ../assets/sass/screen.scss */
+.cf {
+  clear: both; }
+
+/* line 12, ../assets/sass/screen.scss */
+body {
+  font-family: "helvetica", arial, sans-serif;
+  background: #EFEFEF; }
+
+/* line 17, ../assets/sass/screen.scss */
+select {
+  width: 100%;
+  margin: 0;
+  height: 50px;
+  background: transparent;
+  outline: 0;
+  background: rgba(0, 0, 0, 0) !important;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none; }
+
+/* line 30, ../assets/sass/screen.scss */
+.container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+/* line 35, ../assets/sass/screen.scss */
+ul {
+  margin-right: -15px; }
+
+/* line 39, ../assets/sass/screen.scss */
+li {
+  float: left;
+  position: relative;
+  width: 33.33333%;
+  padding: 5px;
+  min-height: 200px;
+  margin-bottom: 5px; }
+  /* line 47, ../assets/sass/screen.scss */
+  li:first-child {
+    float: none;
+    margin-left: auto;
+    margin-right: auto; }
+  /* line 53, ../assets/sass/screen.scss */
+  li:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    background: #FFF;
+    z-index: -1; }
+
+/* line 66, ../assets/sass/screen.scss */
+.rank {
+  right: 5px;
+  top: 0;
+  text-align: center;
+  width: 28px;
+  background: #efefef;
+  padding: 5px 0;
+  color: #000;
+  position: absolute; }
+
+/* line 102, ../assets/sass/screen.scss */
+.info {
+  width: 50%;
+  float: left; }
+
+/* line 107, ../assets/sass/screen.scss */
+.book-image {
+  float: left;
+  width: 120px;
+  height: auto;
+  margin-right: 10px; }
