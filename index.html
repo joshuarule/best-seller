@@ -10,110 +10,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/screen.css">
-        <script src="raphael-min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        
-
-        <script type="text/javascript" charset="utf-8">
-
-          var hardcover = 'http://api.nytimes.com/svc/books/v3/lists/hardcover-fiction.jsonp?callback=foo&api-key=df18c19df02bec07cf184dba193e6d29:17:68861996';
-          var category = 'http://api.nytimes.com/svc/books/v3/lists/names.jsonp?api-key=df18c19df02bec07cf184dba193e6d29%3A17%3A68861996';
-
-          var populate = function(x) {
-            $(".booklist").empty();
-            bookList = x.results.books;
-
-            for (var i = 0; i < bookList.length; i++) {
-              $(".booklist").append("<li><span class='rank'>" + bookList[i].rank + "</span><img class='book-image' style='background-image: url("+ bookList[i].book_image +")'><div class='info'><h2>" + bookList[i].title + "</h2><a href='http://www.amazon.com/gp/product/" + bookList[i].primary_isbn10 + "' target='_blank'>Amazon</a></div><div class='cf'></div></li>");
-            };
-          }
-
-          $.ajax({
-            type:     "GET",
-            url:      hardcover,
-            dataType: "jsonp",
-            success: function(data){
-              populate(data);
-            }
-          });
-
-          $.ajax({
-            type:     "GET",
-            url:      category,
-            dataType: "jsonp",
-            success: function(data){
-              for (var i = 0; i < data.results.length; i++) {
-
-                //capture display name
-                var displayName = data.results[i].display_name;
-                var listName = data.results[i].list_name;
-                // convert display name
-                var name = listName.replace(/\s+/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase();;
-                // add to select
-                $("#category").append("<option value='"+ name + "'>"+displayName+"</option>");
-              };
-            }
-          });
-
-          $(document).ready(function() {
-            $("#category").change(function(e){
-
-              // grab selection based on option value
-              var selection = this.options[this.selectedIndex].value;
-
-              // new request based on selection
-              $.ajax({
-                type:     "GET",
-                url:      'http://api.nytimes.com/svc/books/v3/lists/' + selection + '.jsonp?callback=foo&api-key=df18c19df02bec07cf184dba193e6d29:17:68861996',
-                dataType: "jsonp",
-                success: function(data){
-                  populate(data);
-                }
-              });
-            })
-          });
-
-        </script>
-        <script>
-          window.onload = function() {
-            // var p = Raphael('drawing_board');
-
-            // var line = p.path("M 0 240 l 640 0");
-
-            // p.rect(20,20,50,50)
-            //   .attr({
-            //     fill: "red",
-            //     stroke: "none",
-            //     cursor : "pointer"
-            //   }).click(function(){
-            //     this.attr({fill: "blue"});
-            //   });
-
-            // p.circle(100,100,30)
-            //   .attr({
-            //     stroke : "none", 
-            //     fill : "45-#F44-#00F"
-            //   }).animate({
-            //     cx : 300,
-            //     transform : "s2"
-            //   }, 1000, "ease-in-out");
-
-            // p.rect(200,250,50,50)
-            //   .attr({
-            //     fill : "orange"
-            //   }).animate({
-            //     transform : "r180",
-            //     fill : "blue"
-            //   }, 1000, "ease-in-out");
-
-            // p.text(70, 250, "hello there")
-            //   .attr({
-            //     "font-family" : "helvetica",
-            //     "font-size" : 20
-            //   });
-
-          }
-        </script>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
@@ -129,18 +27,14 @@
             </div>
           </header>
           
-          <!-- <div id="drawing_board"></div> -->
           <ul class="booklist">
             
           </ul>
           <div class="cf"></div>
         </div>
 
-        
-        <!-- Add your site or application content here -->
-        <!-- <p>Hello world! This is HTML5 Boilerplate.</p> -->
-
-          
+      <script src="assets/js/app.js"></script>
       <script src="http://localhost:35729/livereload.js"></script>
+      
     </body>
 </html>
